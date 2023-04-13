@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+
+    <style>
+    .share-button {
+      position: relative;
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 100%;
+    }
+
+    .share-button i {
+      margin-right: 5px;
+    }
+
+    .share-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      display: none;
+    }
+
+    .share-menu a {
+      color: #fff;
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="share-button" id="shareButton">
+    <!-- <i class=> Share</i> -->
+    <i class="fa-thin fa-share-nodes"></i>
+    <div class="share-menu" id="shareMenu">
+      <a href="https://www.facebook.com/sharer.php?u=YOUR_URL" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+      <a href="https://twitter.com/share?url=YOUR_URL&text=YOUR_TEXT" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+      <a href="https://www.linkedin.com/shareArticle?url=YOUR_URL" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+      <a href="https://pinterest.com/pin/create/button/?url=YOUR_URL&media=YOUR_IMAGE_URL&description=YOUR_DESCRIPTION" target="_blank"><i class="fa fa-pinterest"></i> Pinterest</a>
+    </div>
+  </div>
+
+  <script>
+    var shareButton = document.getElementById('shareButton');
+    var shareMenu = document.getElementById('shareMenu');
+
+    // Show/hide share menu on click
+    shareButton.addEventListener('click', function () {
+      if (shareMenu.style.display === 'none') {
+        shareMenu.style.display = 'block';
+      } else {
+        shareMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
+

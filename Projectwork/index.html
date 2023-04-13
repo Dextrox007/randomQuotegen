@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Voice</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding-top: 100px;
+		}
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+		button {
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: #3498db;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+		}
+		button:hover {
+			background-color: #2980b9;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Voice</h1>
+	<button id="speak-btn">Speak</button>
+
+	<script>
+		// Get the list of available voices
+		const voices = speechSynthesis.getVoices();
+
+		// Find the voice that matches your language and name
+		const myVoice = voices.find((voice) => voice.lang === "en-US" && voice.name === "Microsoft Zira Desktop");
+
+		// Create a new Utterance object with your voice
+		const utterance = new SpeechSynthesisUtterance("Hello, this is my voice!");
+		utterance.voice = myVoice;
+		utterance.pitch = 1.5; // Change the pitch to make the voice sound lower
+		utterance.rate = 1.5; // Change the rate to make the voice speak slower
+
+		// Speak the utterance when the button is clicked
+		const speakBtn = document.getElementById("speak-btn");
+		speakBtn.addEventListener("click", () => {
+			speechSynthesis.speak(utterance);
+		});
+	</script>
+</body>
+</html>

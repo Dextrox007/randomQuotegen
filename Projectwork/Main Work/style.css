@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'Poppins','sans-serif'; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:#EA1538;
+
+}
+.wrapper{
+    width: 600px;
+    background: black;
+    color: #EA1538;
+    border-radius: 15px;
+    font-size: 1rem;
+
+    padding: 30px 20px 25px;
+    transition: all 1s ease-in-out;
+}
+
+.wrapper:hover{
+    background: rgb(201, 75, 96);
+    
+}
+.wrapper header{
+    text-align: center;
+    font-weight: 600;
+    text-align: center;
+}
+.wrapper .content{
+    margin: 35px 0;
+}
+.content .quote-area{
+    display: flex;
+    justify-content: center;
+}
+.quote-area i{
+    font-size: 15px;
+}
+.quote-area i:first-child{
+    margin: 3px 10px 0 0;
+}
+.quote-area i:last-child{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+.quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+    word-break: normal;
+}
+.content .author{
+    display: flex;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 18px;
+    justify-content: flex-end;
+}
+.author span:first-child{
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+.wrapper .buttons{
+    border-top: 1px solid #ccc;
+}
+
+
+.buttons .features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.features ul{
+    display: flex;
+}
+.features ul li{
+    list-style: none;
+    margin: 0 5px;
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    cursor: cell;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #5372f0; 
+    color: #5372f0;
+    transition: all 0.3s ease-in-out;
+}
+.features ul li:hover{
+    color: whitesmoke;
+    border: black;
+    background: #EA1538;
+}
+.features button{
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: grabbing;
+    font-style: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #5372f0;
+    transition: all 0.3s ease-in-out;
+}
+.features button:hover{
+    color: whitesmoke;
+    border: black;
+    background: #EA1538;
+    transition: all 0.3s ease-in-out;
+}
+button .loading{
+    opacity: 0.7;
+    pointer-events: none;
+}
+/* .copyright{
+    color: #5372f0;
+} */
+@media(max-width: 480px){
+    body{
+        background-color: aquamarine;
+        justify-content: center;
+        margin: auto;
+    }
+
+}
